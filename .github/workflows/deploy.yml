@@ -3,7 +3,7 @@ name: deploy
 
 # 當以下事件發生時，觸發
 on:
-  # 這邊設定的是：push/pullrequest到main時即觸發
+  # 這邊設定的是：push/pullrequest 到 main 時即觸發
   push:
     branches:
       - main
@@ -11,7 +11,7 @@ on:
     branches:
       - main
 
-  # 有加這行可以手動觸發actions
+  # 有加這行可以手動觸發 actions
   workflow_dispatch:
 
 # 觸發內容
@@ -25,12 +25,12 @@ jobs:
     steps:
       # 1. 專門for node.js的actions，記得依node.js版本更新其後version
       - uses: actions/checkout@v4
-      # 把vue內容build起來
+      # 把內容 build 起來
       - name: Install & Build # 執行
         run: |
           npm install
-          npm run build 
-          
+          npm run build
+
       # 2. deploy
       - name: Deploy
         # 別人的actions拿來借用

@@ -14,8 +14,8 @@ function Footer() {
   return (
     <footer
       className={cn(
-        "w-full max-w-[640px] mx-4 my-12 grid grid-cols-2 gap-4 text-white",
-        "sm:grid-cols-9",
+        "w-full max-w-[640px] mx-4 my-12 grid grid-cols-2 gap-8 text-white",
+        "sm:grid-cols-9 sm:gap-4",
       )}
     >
       <img
@@ -55,7 +55,7 @@ function Footer() {
       </div>
       <div className={cn("flex flex-col gap-2 col-span-1", "sm:col-span-2")}>
         <h3 className="font-bold">Social Media</h3>
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           <a
             href="https://twitter.com"
             target="_blank"

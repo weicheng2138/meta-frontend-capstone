@@ -1,6 +1,6 @@
 import { cn } from "../lib/utils";
-import imgA from "../assets/Mario and Adrian A.jpg";
-import imgB from "../assets/Mario and Adrian B.jpg";
+import imgA from "../assets/ma-1.jpg";
+import imgB from "../assets/ma-2.jpg";
 function HeroEnd() {
   return (
     <div

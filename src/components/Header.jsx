@@ -13,7 +13,10 @@ function Header({ isOpen, setIsOpen }) {
           <img src={Logo} alt="Logo" />
         </Link>
 
-        <button className="inline sm:hidden" onClick={handleClick}>
+        <button
+          className="inline sm:hidden hover:text-gray-400"
+          onClick={handleClick}
+        >
           {isOpen ? <X /> : <AlignJustify />}
         </button>
         <div className="hidden sm:flex sm:gap-2">

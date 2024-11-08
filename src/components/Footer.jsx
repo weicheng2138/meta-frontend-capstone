@@ -14,7 +14,7 @@ function Footer() {
   return (
     <footer
       className={cn(
-        "w-full max-w-[640px] m-4 grid grid-cols-2 gap-4 text-white",
+        "w-full max-w-[640px] mx-4 my-12 grid grid-cols-2 gap-4 text-white",
         "sm:grid-cols-9",
       )}
     >

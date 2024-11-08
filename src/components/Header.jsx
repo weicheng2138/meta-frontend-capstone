@@ -2,6 +2,7 @@ import { AlignJustify, X } from "lucide-react";
 import Logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 import { SITE_MENU } from "../constants";
+
 function Header({ isOpen, setIsOpen }) {
   const handleClick = () => {
     setIsOpen((prev) => !prev);
@@ -19,11 +20,11 @@ function Header({ isOpen, setIsOpen }) {
         >
           {isOpen ? <X /> : <AlignJustify />}
         </button>
-        <div className="hidden sm:flex sm:gap-2">
+        <div className="hidden sm:flex sm:gap-4">
           {SITE_MENU.map((item) => {
             return (
               <Link key={item.link} to={item.link}>
-                <span className="text-primary hover:text-lemon transition-colors">
+                <span className="text-primary hover:text-lemon transition-colors text-sm">
                   {item.name}
                 </span>
               </Link>

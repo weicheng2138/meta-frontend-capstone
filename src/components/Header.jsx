@@ -20,7 +20,9 @@ function Header({ isOpen, setIsOpen }) {
           {SITE_MENU.map((item) => {
             return (
               <Link key={item.link} to={item.link}>
-                <span className="hover:bg-red-300">{item.name}</span>
+                <span className="text-primary hover:text-lemon">
+                  {item.name}
+                </span>
               </Link>
             );
           })}

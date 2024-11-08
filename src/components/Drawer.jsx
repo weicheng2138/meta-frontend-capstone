@@ -17,13 +17,13 @@ function Drawer({ isOpen, setIsOpen }) {
       <div
         onClick={() => setIsOpen(false)}
         className={cn(
-          "fixed inset-0 bg-white/30 backdrop-blur-sm overflow-hidden",
+          "fixed inset-0 bg-white/30 backdrop-blur-sm overflow-hidden z-50",
           !isOpen && "hidden",
         )}
       />
       <div
         className={cn(
-          "fixed top-0 left-0 bottom-0 w-full max-w-72 bg-white transition-transform drop-shadow-md",
+          "fixed top-0 left-0 bottom-0 w-full max-w-72 bg-white transition-transform drop-shadow-md z-50",
           isOpen ? "translate-x-0" : "-translate-x-full",
           "flex-col",
         )}

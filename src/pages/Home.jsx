@@ -5,9 +5,7 @@ function Home() {
       <section className="bg-primary flex justify-center">
         <Hero />
       </section>
-      <section className="flex justify-center">
-        <Hero />
-      </section>
+      <section className="flex justify-center"></section>
     </>
   );
 }

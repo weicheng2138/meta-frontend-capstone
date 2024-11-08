@@ -1,5 +1,5 @@
 import { AlignJustify, X } from "lucide-react";
-import Logo from "../assets/Logo.svg";
+import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 import { SITE_MENU } from "../constants";
 
@@ -11,7 +11,7 @@ function Header({ isOpen, setIsOpen }) {
     <header className="flex items-center justify-center sticky w-full top-0 backdrop-blur-sm bg-white/60">
       <nav className="p-4 flex gap-2 w-full justify-between items-center max-w-[640px]">
         <Link to="/" alt="Logo">
-          <img src={Logo} alt="Logo" />
+          <img src={logo} alt="Logo" />
         </Link>
 
         <button

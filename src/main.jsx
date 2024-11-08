@@ -5,16 +5,23 @@ import "./index.css";
 import App from "./App.jsx";
 import About from "./pages/About.jsx";
 import Error from "./pages/Error.jsx";
+import Home from "./pages/Home.jsx";
 
 const router = createHashRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <Error />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 createRoot(document.getElementById("root")).render(

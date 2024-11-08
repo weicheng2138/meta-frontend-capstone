@@ -7,22 +7,20 @@ const Card = ({ name, image, price, description }) => {
   return (
     <div className="flex flex-col justify-between gap-2 w-full h-full bg-hightlight-light rounded-xl">
       <div className="flex flex-col gap-2">
-        <div>
-          <img
-            src={image}
-            alt="food"
-            className="rounded-t-xl object-cover h-40 w-full"
-          />
-        </div>
+        <img
+          src={image}
+          alt="food"
+          className="rounded-t-xl object-cover h-40 w-full"
+        />
         <div className="flex flex-col p-2">
-          <div className="flex justify-between gap-2">
+          <div className="flex justify-between gap-2 mb-4">
             <h3 className="font-medium">{name}</h3>
             <span className="text-price">{price}</span>
           </div>
           <p className="text-sm text-hightlight-dark">{description}</p>
         </div>
       </div>
-      <button className="px-4 py-2 group font-medium hover:text-lemon">
+      <button className="w-fit text-sm px-4 py-2 group font-medium hover:text-lemon">
         Order a delivery{" "}
         <Bike className="inline group-hover:translate-x-4 transform transition-transform duration-300" />
       </button>
@@ -58,7 +56,7 @@ function WeekSpecials() {
   return (
     <div
       className={cn(
-        "w-full py-6 px-2 max-w-[640px] flex flex-col justify-center items-center gap-6",
+        "w-full py-6 px-2 max-w-[640px] flex flex-col justify-center items-center gap-6 my-8",
       )}
     >
       <section className="flex justify-between w-full items-center">
@@ -67,7 +65,7 @@ function WeekSpecials() {
           Online Menu
         </button>
       </section>
-      <section className={cn("flex flex-col gap-2", "sm:flex-row")}>
+      <section className={cn("flex flex-col gap-6", "sm:flex-row sm:gap-2")}>
         {meals.map((meal) => {
           return <Card key={meal.name} {...meal} />;
         })}

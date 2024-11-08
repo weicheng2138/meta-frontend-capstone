@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       className={cn(
-        "w-full py-6 px-2 max-w-[640px] flex flex-col justify-center items-center gap-6",
+        "w-full py-6 px-2 max-w-[640px] flex flex-col justify-center items-center gap-6 my-8",
         "sm:flex-row sm:px-3",
       )}
     >

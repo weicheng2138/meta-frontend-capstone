@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { cn } from "./lib/utils";
 import "./App.css";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,50 +13,17 @@ function App() {
     <>
       <Header setIsOpen={setIsOpen} isOpen={isOpen} />
       <Drawer setIsOpen={setIsOpen} isOpen={isOpen} />
-      <main className="overflow-hidden">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est,{" "}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est,{" "}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nullam Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, vehicula, velit at ultricies
-          luctus, magna purus tincidunt est, Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nullam vehicula, velit at ultricies
-          luctus, magna purus tincidunt est,{" "}
-        </p>
+      <main>
+        <section className="bg-primary flex justify-center">
+          <Hero />
+        </section>
+        <section className="flex justify-center">
+          <Hero />
+        </section>
       </main>
+      <section className={cn("bg-primary flex justify-center")}>
+        <Footer />
+      </section>
     </>
   );
 }

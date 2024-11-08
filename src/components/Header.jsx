@@ -7,7 +7,7 @@ function Header({ isOpen, setIsOpen }) {
     setIsOpen((prev) => !prev);
   };
   return (
-    <header className="flex items-center justify-center sticky w-full top-0">
+    <header className="flex items-center justify-center sticky w-full top-0 backdrop-blur-sm bg-white/60">
       <nav className="p-4 flex gap-2 w-full justify-between items-center max-w-[640px]">
         <Link to="/" alt="Logo">
           <img src={Logo} alt="Logo" />
@@ -23,7 +23,7 @@ function Header({ isOpen, setIsOpen }) {
           {SITE_MENU.map((item) => {
             return (
               <Link key={item.link} to={item.link}>
-                <span className="text-primary hover:text-lemon">
+                <span className="text-primary hover:text-lemon transition-colors">
                   {item.name}
                 </span>
               </Link>

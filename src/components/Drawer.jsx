@@ -42,7 +42,7 @@ function Drawer({ isOpen, setIsOpen }) {
               key={item.link}
               to={item.link}
               onClick={() => setIsOpen(false)}
-              className="block p-2 mx-4 text-primary hover:text-lemon"
+              className="block p-2 mx-4 text-primary hover:text-lemon transition-colors"
             >
               {item.name}
             </Link>

@@ -20,7 +20,12 @@ function HeroEnd() {
       </section>
       <section className={cn("w-full", "sm:basis-1/2")}>
         <div className={cn("relative h-96 w-full", "sm:h-60")}>
-          <div className={cn("absolute h-52 w-2/3 bottom-0 left-0", "sm:w-44")}>
+          <div
+            className={cn(
+              "absolute z-10 h-52 w-2/3 bottom-0 left-0",
+              "sm:w-44",
+            )}
+          >
             <img
               src={imgA}
               alt="mario and adrian a"
@@ -30,7 +35,9 @@ function HeroEnd() {
               )}
             />
           </div>
-          <div className={cn("absolute top-0 right-0 h-52 w-2/3", "sm:w-44")}>
+          <div
+            className={cn("absolute z-10 top-0 right-0 h-52 w-2/3", "sm:w-44")}
+          >
             <img
               src={imgB}
               alt="mario and adrian b"

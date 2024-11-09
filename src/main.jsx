@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Error from "./pages/Error.jsx";
 import Home from "./pages/Home.jsx";
+import Reservations from "./pages/Reservations";
 import AlertProvider from "./context/AlertProvider";
 import Alert from "./components/Alert";
 
@@ -18,6 +19,10 @@ const router = createHashRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/reservations",
+        element: <Reservations />,
       },
     ],
   },

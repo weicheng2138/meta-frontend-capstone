@@ -61,7 +61,7 @@ function WeekSpecials() {
     >
       <section className="flex justify-between w-full items-center">
         <h2 className="text-lg font-bold">Weeks Specials</h2>
-        <button className="bg-lemon text-primary px-4 py-2 rounded w-fit hover:bg-lemon/75 transition-colors">
+        <button className="bg-lemon text-primary px-4 py-2 rounded-full w-fit hover:bg-lemon/75 transition-colors">
           Online Menu
         </button>
       </section>

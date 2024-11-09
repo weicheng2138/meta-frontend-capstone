@@ -1,5 +1,6 @@
 import { cn } from "../lib/utils";
 import imgChef from "../assets/restaurant chef B.jpg";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <div
@@ -16,9 +17,11 @@ function Hero() {
           duis sit lorem aliquam clita erat et sed ipsum labore rebum laoreet
           delenit eum. Diam et sanctus.
         </p>
-        <button className="bg-lemon text-primary px-4 py-2 rounded w-fit hover:bg-lemon/75 transition-colors">
-          Reserve a Table
-        </button>
+        <Link to="/reservations">
+          <button className="bg-lemon text-primary px-4 py-2 rounded-full w-fit hover:bg-lemon/75 transition-colors">
+            Reserve a Table
+          </button>
+        </Link>
       </section>
       <section className={cn("basis-1/2")}>
         <img

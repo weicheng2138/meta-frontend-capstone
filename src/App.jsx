@@ -15,9 +15,7 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <section className={cn("bg-primary flex justify-center")}>
-        <Footer />
-      </section>
+      <Footer />
     </>
   );
 }

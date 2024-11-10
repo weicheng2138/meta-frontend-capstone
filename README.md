@@ -1,6 +1,22 @@
 # Meta Frontend Capstone
 
-You can browse the **Login** to get the form action and context from my assignment. Please try it.
+You can browse the **Login** and press `Reserve a Table` to get the form action and context from my assignment. Please try it.
+
+## Setup bash
+
+```bash
+pnpm install
+```
+
+```bash
+pnpm dev
+```
+
+Test for BookingForm.jsx
+
+```bash
+pnpm test
+```
 
 ## Deploy using `gh-pages`
 

@@ -6,7 +6,6 @@ import { useAlertContext } from "../context/alertContext";
 import { Loader } from "lucide-react";
 import logo from "../assets/Logo.svg";
 import { useNavigate } from "react-router-dom";
-import { cn } from "../lib/utils";
 
 const EmptyMessage = () => {
   return <div className="text-xs opacity-0">{"empty"}</div>;

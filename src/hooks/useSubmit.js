@@ -18,6 +18,14 @@ const useSubmit = () => {
       if (random < 0.5) {
         throw new Error("Something went wrong");
       }
+
+      if (url === "form") {
+        setResponse({
+          type: "success",
+          message: "Reservation successful! We'll see you soon!",
+        });
+        return;
+      }
       setResponse({
         type: "success",
         message: `Login successful! Welcome ${data.email}`,

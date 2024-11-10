@@ -10,8 +10,12 @@ import { useAlertContext } from "../context/alertContext";
 const EmptyMessage = () => {
   return <div className="text-xs opacity-0">{"empty"}</div>;
 };
-const ErrorMessage = ({ message }) => {
-  return <div className="text-red-500 text-xs">{message}</div>;
+const ErrorMessage = ({ message, dataTestId }) => {
+  return (
+    <div data-testid={dataTestId} className="text-red-500 text-xs">
+      {message}
+    </div>
+  );
 };
 const ReservationSchema = Yup.object().shape({
   date: Yup.date().required("Required"),
@@ -186,7 +190,10 @@ function Reservations() {
                   className="border p-2 rounded-lg"
                 />
                 {errors.firstName && touched.firstName ? (
-                  <ErrorMessage message={errors.firstName} />
+                  <ErrorMessage
+                    dataTestId="error-firstname"
+                    message={errors.firstName}
+                  />
                 ) : (
                   <EmptyMessage />
                 )}
@@ -240,6 +247,7 @@ function Reservations() {
                 </button>
               </Link>
               <button
+                data-testid="submit"
                 type="submit"
                 className="w-full m-auto flex justify-center mt-4 bg-lemon text-primary px-4 py-2 rounded hover:bg-lemon/75 transition-colors"
               >

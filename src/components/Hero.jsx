@@ -10,7 +10,9 @@ function Hero() {
       )}
     >
       <section className="flex flex-col basis-1/2">
-        <h1 className="text-lemon text-3xl font-black">Little Lemon</h1>
+        <h1 id="test-store-name" className="text-lemon text-3xl font-black">
+          Little Lemon
+        </h1>
         <h2 className="text-white text-lg font-bold mb-2">Chicago</h2>
         <p className="text-white mb-6">
           Lorem ipsum dolor sit amet at et stet zzril erat ea rebum et sed. At

@@ -1,7 +1,7 @@
 import { cn } from "../lib/utils";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Loader } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import useSubmit from "../hooks/useSubmit";
@@ -25,21 +25,48 @@ const ReservationSchema = Yup.object().shape({
 });
 
 function Reservations() {
-  const { isLoading, response, submit } = useSubmit();
+  const { isLoading, response, submit, rightData } = useSubmit();
   const { onOpen } = useAlertContext();
+  const modal = useRef(null);
 
   useEffect(() => {
     if (!response) return;
     onOpen(response.type, response.message);
-    // if (response.type === "success") {
-    // }
+
+    if (response.type === "success") {
+      modal.current.showModal();
+    }
   }, [response]);
+
   const handleSubmit = (values) => {
     submit("form", values);
-    console.log(values);
   };
   return (
     <div className="bg-hightlight-light flex justify-center">
+      {response && response.type === "success" && rightData && (
+        <dialog
+          ref={modal}
+          id="modal"
+          className="rounded-lg p-8 drop-shadow bg-white flex flex-col items-center"
+        >
+          <h1 className="text-3xl mb-4">Successfully</h1>
+          <div className="flex gap-2 justify-between w-full">
+            <p>{rightData.date}</p>
+            <p>{rightData.time}</p>
+          </div>
+          <p>{`Adult ${rightData.adult}, Child ${rightData.child}`}</p>
+          <Link to="/" className="w-full mt-4">
+            <button
+              className="w-full m-auto flex justify-center mt-4 bg-lemon text-primary px-4 py-2 rounded hover:bg-lemon/75 transition-colors"
+              onClick={() => {
+                modal.current.close();
+              }}
+            >
+              Back to Home
+            </button>
+          </Link>
+        </dialog>
+      )}
       <div className={cn("w-full py-6 px-4 max-w-[640px] flex flex-col gap-6")}>
         <h1 className="text-lemon text-3xl font-black">Little Lemon</h1>
         <section

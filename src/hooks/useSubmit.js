@@ -9,6 +9,7 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [rightData, setRightData] = useState(null);
 
   const submit = async (url, data) => {
     const random = Math.random();
@@ -24,6 +25,7 @@ const useSubmit = () => {
           type: "success",
           message: "Reservation successful! We'll see you soon!",
         });
+        setRightData(data);
         return;
       }
       setResponse({
@@ -40,7 +42,7 @@ const useSubmit = () => {
     }
   };
 
-  return { isLoading, response, submit };
+  return { isLoading, response, submit, rightData };
 };
 
 export default useSubmit;
